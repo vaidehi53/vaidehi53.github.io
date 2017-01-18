@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my html page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<body ng-app="myapp">
+
+<div class="bg-main proPage">
+	<div class="left-panel">
+		<div class="top-side">
+
+			<div class="menu">
+				<div class="menu-box">
+					<span class="ti-menu"></span>
+				</div>
+			</div>
+
+			<div class="logo">
+				<div class="logo-in"><a href="index.html"><img src="images/logo-white.png"></a></div>
+			</div>
+
+		</div>
+		<div class="bottom-side">
+			<div class="breadcrumb">
+				<a href="index.html"><span></span></a>
+				<a href="#"><span></span></a>
+			</div>
+			<!-- <img src="images/big.jpeg"> -->
+			<div class="zoomBox" ng-controller="productsController as products">
+			
+				<div class="wm-zoom-container my-zoom-1">
+	  				<div class="wm-zoom-box">
+	  					<div ng-repeat="proCh in products.proChair">
+	  						<img src='{{proCh.images}}' class="wm-zoom-default-img" alt="alternative text" data-hight-src='{{proCh.images}}'>
+	
+	  					</div>
+	  					
+	  					
+						<!-- <img src="images/big.png" class="wm-zoom-default-img" alt="alternative text" data-hight-src="images/big.png"> -->
+	  				</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="right-panel">
+		<div class="right-in">
+			<div class="bottom-side">
+				<h3>Feature</h3>
+				<div class="feature-box">	
+					<div class="woodType">Wood <button class="wtBtn">Mahogni</button></div>
+					<div class="wishBox"><a href="#"><span class="ti-heart"></span> 
+					Add to Wishlist</a></div>
+					<div class="strikeprice">
+						<span class="actualP">&#8377 15,000 </span>
+						<span class="newP">&#8377 11,999</span>
+					</div>
+					<a href="#" class="cartPro">Add to Cart</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- <script type="text/javascript" src="js/jquery-3.0.0.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/customangular.js"></script>
+
+<script type="text/javascript" src="js/jquery.wm-zoom-1.0.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>
+</html>

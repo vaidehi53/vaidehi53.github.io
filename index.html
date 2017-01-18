@@ -1,1 +1,191 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my html page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<body ng-app="myapp">
+
+<div class="bg-main">
+	<div class="left-panel">
+		<div class="top-side">
+
+			<div class="menu">
+				<div class="menu-box">
+					<span class="ti-menu"></span>
+				</div>
+			</div>
+
+			<div class="logo">
+				<div class="logo-in"><a href="#"><img src="images/logo-white.png"></a></div>
+			</div>
+
+		</div>
+
+		<div class="bottom-side">
+			<h3>Choose Room Type</h3>
+			<div class="front-bar clearfix">
+				<ul class="bxslider">
+					<li>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Living Room</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Kitchen</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Bed Room</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Office</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Gym</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Closets</span></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Living Room</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Kitchen</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Bed Room</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Office</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Gym</span></div>
+							</div>
+						</div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Closets</span></div>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="right-panel">
+		<div class="right-in">
+			<div class="bottom-side">
+				<h3>Properties</h3>
+				<div class="size-box">
+						<div class="s_size">Size : </div>
+						<div class="swidth">
+							<span class="swSpan"><input type="text" placeholder="200" name=""></span>
+							<span>Width</span>
+						</div>
+						<div class="sheight">
+							<span class="swSpan"><input type="text" placeholder="200" name=""></span>	
+							<span>Height</span>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-in" ng-controller="mycontrol">
+			<div class="bottom-side">
+				<h3>Objects</h3>
+				<span class="choose">Choose a category</span>
+				<select class="selectbox" id="js-select" data-target=".cats" ng-init="chairs.label[0]">
+
+					<option ng-repeat="v in chairs" data-show="{{v.show}}">{{ v.label }}</option>
+				</select>
+				<div class="category_image" ng-controller="productsController as products">
+					<div class="cats clearfix">
+						<ul class="ul1">
+							<li ng-repeat="proCh in products.proChair">
+								<a href="product.html">
+									<img src={{proCh.images}}>
+									<span>Quick View</span>
+								</a>
+							</li>
+							
+						</ul>
+						<ul class="ul2">
+							<li ng-repeat="proCh in products.kids">
+								<a href="product.html">
+									<img src={{proCh.images}}>
+									<span>Quick View</span>
+								</a>
+							</li>
+							
+						</ul>
+						<ul class="ul3">
+							<li ng-repeat="proCh in products.wood">
+								<a href="product.html">
+									<img src={{proCh.images}}>
+									<span>Quick View</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript" src="js/customangular.js"></script>
+
+<script type="text/javascript" src="js/jquery.wm-zoom-1.0.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>
+</html>
